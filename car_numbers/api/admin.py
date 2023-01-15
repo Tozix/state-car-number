@@ -6,7 +6,7 @@ from django.contrib import admin
 class CarNumer(admin.ModelAdmin):
     list_display = (
         'pk',
-        'palte',
+        'plate',
     )
-    search_fields = ('palte',)
+    search_fields = ('plate',)
     empty_value_display = '-пусто-'
