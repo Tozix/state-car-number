@@ -48,7 +48,7 @@ POST https://plate.boostnet.ru/auth/users/
 {
     "email": "",
     "username": "string",
-    "id": int
+    "id": "f19f56bf-79ab-46cb-a8a3-50edf4e65ca4"
 }
 
 ```
