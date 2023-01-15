@@ -69,9 +69,9 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /home/tozix/plate
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/car_numbers:latest
-            sudo docker-compose stop
-            sudo docker-compose rm -f web
+            sudo -S docker pull ${{ secrets.DOCKER_USERNAME }}/car_numbers:latest < ${{ secrets.SSH_PASSPHRASE }}
+            sudo -S docker-compose stop < ${{ secrets.SSH_PASSPHRASE }}
+            sudo -S docker-compose rm -f web < ${{ secrets.SSH_PASSPHRASE }}
             echo > .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo DEBUG=${{ secrets.DEBUG }} >> .env
@@ -82,5 +82,5 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-            sudo docker-compose up -d
-            sudo docker-compose exec -T web python manage.py collectstatic --no-input
+            sudo -S docker-compose up -d < ${{ secrets.SSH_PASSPHRASE }}
+            sudo -S docker-compose exec -T web python manage.py collectstatic --no-input < ${{ secrets.SSH_PASSPHRASE }}
