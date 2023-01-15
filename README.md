@@ -136,11 +136,7 @@ GET https://plate.boostnet.ru/api/plate/generate
 ```json
 {
     "generated_plate": [
-        "A247AA",
-        "T153TT",
-        "M910MM",
-        "A753AA",
-        "E709EE"
+        "X701CC"
     ]
 }
 
@@ -157,15 +153,13 @@ GET https://plate.boostnet.ru/api/plate/generate/5
 ```json
 
 {
-
-"generated_plate": [
-    "A183AA",
-    "O736OO",
-    "M393MM",
-    "Y684YY",
-    "P493PP",
-]
-
+    "generated_plate": [
+        "P788KP",
+        "P946OH",
+        "K319HC",
+        "C375CH",
+        "M868AH"
+    ]
 }
 
 ```
