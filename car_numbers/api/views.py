@@ -20,12 +20,13 @@ def gen_number_plate():
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def generate_plate(request, amount=1):
-    plates = []
-    for _ in range(amount):
-        plates.append(gen_number_plate())
+    if request.method == 'GET':
+        plates = []
+        for _ in range(amount):
+            plates.append(gen_number_plate())
 
-    data = {"generated_plate": plates}
-    return Response(data, status=status.HTTP_200_OK)
+        data = {"generated_plate": plates}
+        return Response(data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
