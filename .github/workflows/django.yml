@@ -65,7 +65,8 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          password: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT }}
           script: |
             cd /home/tozix/plate
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/car_numbers:latest
