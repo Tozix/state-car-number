@@ -15,7 +15,7 @@ class CarNumer(models.Model):
         max_length=9,
         validators=[
             RegexValidator(
-                regex=r'^[ABEKMHOPCTYX]\d{3}[ABEKMHOPCTYX]{2}$',
+                regex='^[ABEKMHOPCTYX]\d{3}[ABEKMHOPCTYX]{2}$',
                 message='Недопустимые символы в номере!'
             )
         ])

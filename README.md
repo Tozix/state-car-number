@@ -4,7 +4,7 @@ ___
 ### Описание
 REST-API приложение на Python сделаное в рамках тестового задания.
 
-- Проект доступен по [адресу](https://plate.boostnet.ru)
+- Проект доступен по [адресу](https://plate.boostnet.ru/auth/users/)
 
 
 ### Технологии
@@ -59,7 +59,7 @@ POST https://plate.boostnet.ru/auth/users/
 
 ```bash
 
-POST /jwt/create/
+POST https://plate.boostnet.ru/jwt/create/
 
 ```
 
@@ -82,7 +82,7 @@ POST /jwt/create/
 
 ```bash
 
-POST /jwt/refresh/
+POST https://plate.boostnet.ru/jwt/refresh/
 
 ```
 
@@ -102,7 +102,7 @@ POST /jwt/refresh/
 
 ```bash
 
-POST /jwt/verify/
+POST https://plate.boostnet.ru/jwt/verify/
 
 ```
 
@@ -121,7 +121,7 @@ POST /jwt/verify/
 
 ```bash
 
-GET /api/plate/generate
+GET https://plate.boostnet.ru/api/plate/generate
 
 ```
 
@@ -142,7 +142,7 @@ GET /api/plate/generate
 
 ```bash
 
-GET /api/plate/generate/5
+GET https://plate.boostnet.ru/api/plate/generate/5
 
 ```
 
@@ -168,7 +168,7 @@ GET /api/plate/generate/5
 
 ```bash
 
-POST /api/plate/add
+POST https://plate.boostnet.ru/api/plate/add
 
 ```
 В теле запроса:
@@ -194,7 +194,7 @@ POST /api/plate/add
 
 ```bash
 
-GET /api/plate/get/da9ef3e2-d82d-412d-a14b-9f2167a2c26d
+GET https://plate.boostnet.ru/api/plate/get/da9ef3e2-d82d-412d-a14b-9f2167a2c26d
 
 ```
 
