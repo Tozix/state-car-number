@@ -12,9 +12,9 @@ LETTERS = 'ABEKMHOPCTYX'
 
 
 def gen_number_plate():
-    letter = ''.join(choices(LETTERS, k=1))
+    letters = ''.join(choices(LETTERS, k=3))
     numbers = randint(1, 999)
-    return f'{letter}{numbers:03d}{letter}{letter}'
+    return f'{letters[0]}{numbers:03d}{letters[1]}{letters[2]}'
 
 
 @api_view(['GET'])
@@ -25,7 +25,6 @@ def generate_plate(request, amount=1):
         plates.append(gen_number_plate())
 
     data = {"generated_plate": plates}
-    print(type(data))
     return Response(data, status=status.HTTP_200_OK)
 
 
