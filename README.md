@@ -116,6 +116,12 @@ POST https://plate.boostnet.ru/jwt/verify/
 ```  
 
 ### Примеры работы с API для авторизованных пользователей
+Получение учетных данных пример с помощью curl:
+```bash
+
+curl -LX GET https://plate.boostnet.ru/auth/users/me/ -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczODcxODI4LCJqdGkiOiIyYmI5M2UwZjY3ZTA0ZmQ4OTkyMjBiZjIyMDY1ODJjOSIsInVzZXJfaWQiOjF9.JG-ow3toDAMBSfPM8x2Wb7d6E0tgPP_BrSLUh02ngy0'
+
+```
 
 Генерация государственных номеров автомобилей:
 
