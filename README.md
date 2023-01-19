@@ -215,7 +215,7 @@ GET https://plate.boostnet.ru/api/plate/get/da9ef3e2-d82d-412d-a14b-9f2167a2c26d
 
 ```bash
 
-git clone git@github.com:Tozix/api_final_yatube.git
+git clone git@github.com:Tozix/state-car-number.git
 
 ```
 
